@@ -8,96 +8,24 @@
 import SwiftUI
 import AppKit
 
-// Custom NSTextView wrapped in a SwiftUI View for selectable text
-struct SelectableTextView: NSViewRepresentable {
+// TextEditor wrapped in a SwiftUI View for selectable text
+struct SelectableTextEditor: View {
     @Binding var text: String
-    var font: NSFont
-    var onCopySelection: ((String) -> Void)?
+    var onSelectionChange: ((String) -> Void)?
     
-    func makeNSView(context: Context) -> NSScrollView {
-        let textView = NSTextView()
-        textView.isEditable = false
-        textView.isSelectable = true
-        textView.allowsUndo = true
-        textView.font = font
-        textView.textContainerInset = NSSize(width: 10, height: 10)
-        textView.isRichText = false
-        textView.usesFindBar = true
-        textView.isAutomaticQuoteSubstitutionEnabled = false
-        textView.isAutomaticLinkDetectionEnabled = false
-        textView.delegate = context.coordinator
-        
-        // Add a context menu
-        let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "Copy Selection", action: #selector(Coordinator.copySelection(_:)), keyEquivalent: "c"))
-        menu.addItem(NSMenuItem(title: "Select All", action: #selector(Coordinator.selectAll(_:)), keyEquivalent: "a"))
-        menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Find...", action: #selector(Coordinator.showFindInterface(_:)), keyEquivalent: "f"))
-        textView.menu = menu
-        
-        // Setup scrollview
-        let scrollView = NSScrollView()
-        scrollView.hasVerticalScroller = true
-        scrollView.hasHorizontalScroller = true
-        scrollView.documentView = textView
-        
-        return scrollView
-    }
-    
-    func updateNSView(_ nsView: NSScrollView, context: Context) {
-        if let textView = nsView.documentView as? NSTextView {
-            if textView.string != text {
-                textView.string = text
-            }
-        }
-    }
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-    
-    class Coordinator: NSObject, NSTextViewDelegate {
-        var parent: SelectableTextView
-        
-        init(_ parent: SelectableTextView) {
-            self.parent = parent
-        }
-        
-        @objc func copySelection(_ sender: Any?) {
-            guard let textView = (sender as? NSMenuItem)?.menu?.delegate as? NSTextView else {
-                if let textView = NSApp.mainWindow?.firstResponder as? NSTextView {
-                    copyFromTextView(textView)
+    var body: some View {
+        TextEditor(text: $text)
+            .font(.system(.body, design: .monospaced))
+            .textSelection(.enabled)
+            .onChange(of: NSPasteboard.general.string(forType: .string)) { _, newValue in
+                if let selectedText = newValue {
+                    onSelectionChange?(selectedText)
                 }
-                return
             }
-            copyFromTextView(textView)
-        }
-        
-        private func copyFromTextView(_ textView: NSTextView) {
-            if let selectedText = textView.string.substring(with: textView.selectedRange()) {
-                let pasteboard = NSPasteboard.general
-                pasteboard.clearContents()
-                pasteboard.setString(selectedText, forType: .string)
-                parent.onCopySelection?(selectedText)
+            .onHover { _ in
+                // This enables text selection in the TextEditor
+                NSCursor.iBeam.set()
             }
-        }
-        
-        @objc func selectAll(_ sender: Any?) {
-            guard let textView = (sender as? NSMenuItem)?.menu?.delegate as? NSTextView else {
-                if let textView = NSApp.mainWindow?.firstResponder as? NSTextView {
-                    textView.selectAll(nil)
-                }
-                return
-            }
-            textView.selectAll(nil)
-        }
-        
-        @objc func showFindInterface(_ sender: Any?) {
-            guard let textView = (sender as? NSMenuItem)?.menu?.delegate as? NSTextView else {
-                return
-            }
-            textView.performFindPanelAction(nil)
-        }
     }
 }
 
@@ -154,24 +82,20 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        if selectedText != nil && !selectedText!.isEmpty {
-                            Button("Copy Selection") {
-                                copyToClipboard(selectedText ?? "", message: "Selection copied to clipboard!")
-                            }
-                            .buttonStyle(.borderless)
-                            .foregroundColor(.blue)
-                            .padding(.trailing, 10)
-                        }
-                        
                         Button("Copy All") {
                             copyToClipboard(sqlOutput, message: "All SQL copied to clipboard!")
                         }
                         .buttonStyle(.borderless)
                     }
                     
-                    // Custom text view that supports selection
-                    SelectableTextView(text: $sqlOutput, font: NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize, weight: .regular)) { selectedText in
-                        self.selectedText = selectedText
+                    // Simple TextEditor with selection enabled
+                    ScrollView {
+                        TextEditor(text: $sqlOutput)
+                            .font(.system(.body, design: .monospaced))
+                            .frame(minHeight: 300)
+                            .textSelection(.enabled)
+                            .scrollContentBackground(.hidden)
+                            .background(Color(NSColor.textBackgroundColor))
                     }
                     .frame(height: 300)
                     .background(Color(NSColor.textBackgroundColor))
@@ -182,10 +106,23 @@ struct ContentView: View {
                     )
                     
                     // Instructions for text selection
-                    Text("Tip: Select text to copy specific parts. Right-click for more options.")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                        .padding(.top, 5)
+                    HStack {
+                        Text("Tip: Select text to copy specific parts.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        
+                        Spacer()
+                        
+                        Button("Copy Selected Text") {
+                            if let selectedText = getSelectedText() {
+                                copyToClipboard(selectedText, message: "Selection copied to clipboard!")
+                            }
+                        }
+                        .buttonStyle(.bordered)
+                        .controlSize(.small)
+                        .disabled(getSelectedText() == nil)
+                    }
+                    .padding(.top, 5)
                 }
                 .padding()
                 .background(Color(NSColor.controlBackgroundColor))
@@ -244,6 +181,18 @@ struct ContentView: View {
         withAnimation {
             showCopiedAlert = true
         }
+    }
+    
+    private func getSelectedText() -> String? {
+        // Get the current first responder
+        guard let window = NSApp.mainWindow,
+              let fieldEditor = window.fieldEditor(false, for: nil),
+              let selectedRange = fieldEditor.selectedRanges.first as? NSRange,
+              selectedRange.length > 0 else {
+            return nil
+        }
+        
+        return fieldEditor.string.substring(with: selectedRange)
     }
 }
 
