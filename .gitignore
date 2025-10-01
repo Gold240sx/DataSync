@@ -65,3 +65,6 @@ build/
 
 # Logs
 *.log
+
+# Scripts folder
+scripts/
