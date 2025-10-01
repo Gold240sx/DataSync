@@ -37,12 +37,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E6D07CFB2E8CEEAB00E424E1 /* DataSyncTests */ = {
+		E6D07CFB2E8CEEAB00E424E1 /* DataSyncDataTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DataSyncTests;
+			path = DataSyncDataTests;
 			sourceTree = "<group>";
 		};
-		E6F71FF72E8CC27800C17320 /* DataSync */ = {
+		E6F71FF72E8CC27800C17320 /* DataSyncDesktop */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = DataSyncDesktop;
 			sourceTree = "<group>";
@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				E6D07D072E8CF56500E424E1 /* config.xctestplan */,
-				E6F71FF72E8CC27800C17320 /* DataSync */,
-				E6D07CFB2E8CEEAB00E424E1 /* DataSyncTests */,
+				E6F71FF72E8CC27800C17320 /* DataSyncDesktop */,
+				E6D07CFB2E8CEEAB00E424E1 /* DataSyncDataTests */,
 				E6F722142E8CD88400C17320 /* Frameworks */,
 				E6F71FF62E8CC27800C17320 /* Products */,
 			);
@@ -121,7 +121,7 @@
 				E6D07CFF2E8CEEAB00E424E1 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				E6D07CFB2E8CEEAB00E424E1 /* DataSyncTests */,
+				E6D07CFB2E8CEEAB00E424E1 /* DataSyncDataTests */,
 			);
 			name = DataSyncTests;
 			packageProductDependencies = (
@@ -143,7 +143,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				E6F71FF72E8CC27800C17320 /* DataSync */,
+				E6F71FF72E8CC27800C17320 /* DataSyncDesktop */,
 			);
 			name = DataSync;
 			packageProductDependencies = (
