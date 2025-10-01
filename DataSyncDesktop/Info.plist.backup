@@ -5,13 +5,17 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>DevSpace Desktop</string>
+	<string>DataSync</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.michaelMartell.DevSpace-Desktop</string>
+	<string>com.michaelMartell.DataSync</string>
+	<key>INIntentsSupported</key>
+	<array>
+		<string>SelectSingleRepo</string>
+	</array>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -23,7 +27,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>14.0</string>
+	<string>15.5</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.developer-tools</string>
 	<key>NSHumanReadableCopyright</key>
@@ -51,8 +55,18 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>SelectSingleRepoIntent</string>
+	</array>
 	<key>NSInternetUsageDescription</key>
 	<string>This app requires internet access to sync your development environment data across devices and authenticate with cloud services.</string>
+	<key>NSExtensionPointIdentifier</key>
+	<string>com.apple.widgetkit-extension</string>
+	<key>DEV_PASSWORD</key>
+	<string>qirbiC-migboq-nuvki3</string>
+	<key>DEV_USER_ID</key>
+	<string>8ef7e5b6-68c6-41c8-9269-871225e32a13</string>
 	<key>GIDClientID</key>
 	<string>348209316254-2i2uajrujac8u95ldvidkeg0garldlii.apps.googleusercontent.com</string>
 	<key>SUPABASE_PUBLISHABLE_KEY</key>

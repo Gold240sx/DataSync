@@ -1,5 +1,5 @@
 //
-//  DataSchema.swift
+//  SchemaHelpers.swift
 //  DataSync
 //
 //  Created by Michael Martell on 9/30/25.
@@ -7,28 +7,24 @@
 
 import Foundation
 
-// MARK: - Data Schema Registry
-
-// Main data schema registry
-class DataSchemaRegistry {
-    static let shared = DataSchemaRegistry()
+class SchemaHelpers {
+    static let shared = SchemaHelpers()
     
     private init() {}
     
-    // Define all table schemas here
-    lazy var tableSchemas: [TableSchema] = [
+    // Get all schemas
+    lazy var allSchemas: [TableSchema] = [
         ProjectsSchema.schema,
-        userPublicSchema,
-        userPrivateSchema
+        UsersPublicSchema.schema,
+        UsersPrivateSchema.schema,
+        AppStateSchema.schema,
+        LocalAppStateSchema.schema
     ]
     
-    // MARK: - Individual Table Schemas
-    // (Leave these out if not needed here)
-
     // MARK: - Helper Methods
     
     func schema(for tableName: String) -> TableSchema? {
-        return tableSchemas.first { $0.tableName == tableName }
+        return allSchemas.first { $0.tableName == tableName }
     }
     
     func syncOptions(for tableName: String, fieldName: String) -> Set<DataSyncOption>? {
@@ -44,5 +40,15 @@ class DataSchemaRegistry {
     func cloudKitContainers(for tableName: String, fieldName: String) -> Set<CloudKitContainer>? {
         guard let table = schema(for: tableName) else { return nil }
         return table.values.first { $0.name == fieldName }?.cloudKitContainer
+    }
+    
+    func isUnique(for tableName: String, fieldName: String) -> Bool? {
+        guard let table = schema(for: tableName) else { return nil }
+        return table.values.first { $0.name == fieldName }?.unique
+    }
+    
+    func primaryKey(for tableName: String) -> String? {
+        guard let table = schema(for: tableName) else { return nil }
+        return table.primaryKey
     }
 }

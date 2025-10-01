@@ -1,0 +1,12 @@
+
+# Exclude documentation from Xcode build
+documentation/
+*.md
+
+# Exclude example files
+example_data_sync_manager/
+SQL/
+
+# Exclude test files that shouldn't be in production
+*Test*
+*Example*

@@ -12,12 +12,12 @@ import SwiftData
 
 @Model
 final class Project {
-    var id: String
+    var id: String = UUID().uuidString
     var logo: Data?
-    var logo_url: String
-    var project_name: String
-    var project_description: String
-    var created_at: Date
+    var logo_url: String = ""
+    var project_name: String = "New Project"
+    var project_description: String = ""
+    var created_at: Date = Date()
     var updated_at: Date?
 
     init(

@@ -73,3 +73,9 @@ struct TableSchema {
         self.primaryKey = primaryKey
     }
 }
+
+// MARK: - Data Type Enum
+
+enum DataType: String, SimpleEnum { 
+    case string, number, boolean, date, uuid, data
+}
