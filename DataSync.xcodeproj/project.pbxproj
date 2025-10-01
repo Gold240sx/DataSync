@@ -6,13 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E6F722162E8CD88400C17320 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F722152E8CD88400C17320 /* StoreKit.framework */; };
+		E6F7221A2E8CDB7600C17320 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = E6F722192E8CDB7600C17320 /* Auth */; };
+		E6F7221C2E8CDB7600C17320 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = E6F7221B2E8CDB7600C17320 /* Functions */; };
+		E6F7221E2E8CDB7600C17320 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = E6F7221D2E8CDB7600C17320 /* PostgREST */; };
+		E6F722202E8CDB7600C17320 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = E6F7221F2E8CDB7600C17320 /* Realtime */; };
+		E6F722222E8CDB7600C17320 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = E6F722212E8CDB7600C17320 /* Storage */; };
+		E6F722242E8CDB7600C17320 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = E6F722232E8CDB7600C17320 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E6F71FF52E8CC27800C17320 /* DataSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F722152E8CD88400C17320 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E6F722132E8CD65E00C17320 /* Exceptions for "DataSync" folder in "DataSync" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/DataSchema.swift,
+				Models/SchemaTypes.swift,
+			);
+			target = E6F71FF42E8CC27800C17320 /* DataSync */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E6F71FF72E8CC27800C17320 /* DataSync */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E6F722132E8CD65E00C17320 /* Exceptions for "DataSync" folder in "DataSync" target */,
+			);
 			path = DataSync;
 			sourceTree = "<group>";
 		};
@@ -23,6 +48,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F722242E8CDB7600C17320 /* Supabase in Frameworks */,
+				E6F722222E8CDB7600C17320 /* Storage in Frameworks */,
+				E6F7221E2E8CDB7600C17320 /* PostgREST in Frameworks */,
+				E6F7221C2E8CDB7600C17320 /* Functions in Frameworks */,
+				E6F7221A2E8CDB7600C17320 /* Auth in Frameworks */,
+				E6F722202E8CDB7600C17320 /* Realtime in Frameworks */,
+				E6F722162E8CD88400C17320 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				E6F71FF72E8CC27800C17320 /* DataSync */,
+				E6F722142E8CD88400C17320 /* Frameworks */,
 				E6F71FF62E8CC27800C17320 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +76,14 @@
 				E6F71FF52E8CC27800C17320 /* DataSync.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E6F722142E8CD88400C17320 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6F722152E8CD88400C17320 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +106,12 @@
 			);
 			name = DataSync;
 			packageProductDependencies = (
+				E6F722192E8CDB7600C17320 /* Auth */,
+				E6F7221B2E8CDB7600C17320 /* Functions */,
+				E6F7221D2E8CDB7600C17320 /* PostgREST */,
+				E6F7221F2E8CDB7600C17320 /* Realtime */,
+				E6F722212E8CDB7600C17320 /* Storage */,
+				E6F722232E8CDB7600C17320 /* Supabase */,
 			);
 			productName = DataSync;
 			productReference = E6F71FF52E8CC27800C17320 /* DataSync.app */;
@@ -94,6 +141,9 @@
 			);
 			mainGroup = E6F71FEC2E8CC27800C17320;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E6F71FF62E8CC27800C17320 /* Products */;
 			projectDirPath = "";
@@ -323,6 +373,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6F722192E8CDB7600C17320 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		E6F7221B2E8CDB7600C17320 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		E6F7221D2E8CDB7600C17320 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		E6F7221F2E8CDB7600C17320 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		E6F722212E8CDB7600C17320 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		E6F722232E8CDB7600C17320 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E6F71FED2E8CC27800C17320 /* Project object */;
 }
