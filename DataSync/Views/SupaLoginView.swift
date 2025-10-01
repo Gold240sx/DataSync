@@ -63,15 +63,18 @@ struct SupaLoginView: View {
         isLoading = true
 
         Task {
-            do {
-                let session = try await client.auth.signIn(email: email, password: password)
-                print("User session: \(session)")
-                loginSucceeded = true
-                onLogin?()    // <--- Call this so app advances!
-            } catch {
-                self.error = error.localizedDescription
-            }
-            isLoading = false
+//            print(ENV.supabaseUrl)
+//            print(ENV.supabaseSecretKey)
+//            do {
+//                print(ENV.supabaseUrl)
+////                let session = try await client.auth.signIn(email: email, password: password)
+////                print("User session: \(session)")
+////                loginSucceeded = true
+////                onLogin?()    // <--- Call this so app advances!
+//            } catch {
+//                self.error = error.localizedDescription
+//            }
+//            isLoading = false
         }
     }
 }

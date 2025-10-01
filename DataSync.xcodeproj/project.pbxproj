@@ -16,7 +16,18 @@
 		E6F722242E8CDB7600C17320 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = E6F722232E8CDB7600C17320 /* Supabase */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E6D07CFE2E8CEEAB00E424E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F71FED2E8CC27800C17320 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F71FF42E8CC27800C17320;
+			remoteInfo = DataSync;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E6D07CFA2E8CEEAB00E424E1 /* DataSyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataSyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F71FF52E8CC27800C17320 /* DataSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F722152E8CD88400C17320 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -33,6 +44,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E6D07CFB2E8CEEAB00E424E1 /* DataSyncTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DataSyncTests;
+			sourceTree = "<group>";
+		};
 		E6F71FF72E8CC27800C17320 /* DataSync */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -44,6 +60,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E6D07CF72E8CEEAB00E424E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6F71FF22E8CC27800C17320 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E6F71FF72E8CC27800C17320 /* DataSync */,
+				E6D07CFB2E8CEEAB00E424E1 /* DataSyncTests */,
 				E6F722142E8CD88400C17320 /* Frameworks */,
 				E6F71FF62E8CC27800C17320 /* Products */,
 			);
@@ -74,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E6F71FF52E8CC27800C17320 /* DataSync.app */,
+				E6D07CFA2E8CEEAB00E424E1 /* DataSyncTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +114,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E6D07CF92E8CEEAB00E424E1 /* DataSyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6D07D002E8CEEAB00E424E1 /* Build configuration list for PBXNativeTarget "DataSyncTests" */;
+			buildPhases = (
+				E6D07CF62E8CEEAB00E424E1 /* Sources */,
+				E6D07CF72E8CEEAB00E424E1 /* Frameworks */,
+				E6D07CF82E8CEEAB00E424E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6D07CFF2E8CEEAB00E424E1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E6D07CFB2E8CEEAB00E424E1 /* DataSyncTests */,
+			);
+			name = DataSyncTests;
+			packageProductDependencies = (
+			);
+			productName = DataSyncTests;
+			productReference = E6D07CFA2E8CEEAB00E424E1 /* DataSyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E6F71FF42E8CC27800C17320 /* DataSync */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6F720032E8CC27A00C17320 /* Build configuration list for PBXNativeTarget "DataSync" */;
@@ -127,6 +175,10 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					E6D07CF92E8CEEAB00E424E1 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = E6F71FF42E8CC27800C17320;
+					};
 					E6F71FF42E8CC27800C17320 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -150,11 +202,19 @@
 			projectRoot = "";
 			targets = (
 				E6F71FF42E8CC27800C17320 /* DataSync */,
+				E6D07CF92E8CEEAB00E424E1 /* DataSyncTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E6D07CF82E8CEEAB00E424E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6F71FF32E8CC27800C17320 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +225,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E6D07CF62E8CEEAB00E424E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6F71FF12E8CC27800C17320 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,7 +241,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E6D07CFF2E8CEEAB00E424E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F71FF42E8CC27800C17320 /* DataSync */;
+			targetProxy = E6D07CFE2E8CEEAB00E424E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E6D07D012E8CEEAB00E424E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M7PED79H5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelMartell.DataSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataSync.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DataSync";
+			};
+			name = Debug;
+		};
+		E6D07D022E8CEEAB00E424E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M7PED79H5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelMartell.DataSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataSync.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DataSync";
+			};
+			name = Release;
+		};
 		E6F720012E8CC27A00C17320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -228,6 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -286,6 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -307,7 +418,8 @@
 				DEVELOPMENT_TEAM = 3M7PED79H5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DataSync/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -335,7 +447,8 @@
 				DEVELOPMENT_TEAM = 3M7PED79H5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DataSync/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,6 +467,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E6D07D002E8CEEAB00E424E1 /* Build configuration list for PBXNativeTarget "DataSyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6D07D012E8CEEAB00E424E1 /* Debug */,
+				E6D07D022E8CEEAB00E424E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E6F71FF02E8CC27800C17320 /* Build configuration list for PBXProject "DataSync" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
