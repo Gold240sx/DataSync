@@ -44,7 +44,7 @@
 		};
 		E6F71FF72E8CC27800C17320 /* DataSync */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DataSync;
+			path = DataSyncDesktop;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
