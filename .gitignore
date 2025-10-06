@@ -14,16 +14,17 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+*.hmap
 *.ipa
 *.dSYM.zip
 *.dSYM
 
 # Swift Package Manager
 .build/
+.swiftpm/
 Packages/
 Package.pins
 Package.resolved
-.swiftpm
 
 # CocoaPods
 Pods/
@@ -36,3 +37,39 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Code Injection
+iOSInjectionProject/
+
+# macOS
+.AppleDouble
+.LSOverride
+._*
+
+# Environment variables and secrets
+.env
+*.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Sensitive information
+*.pem
+*.key
+*.p12
+*.mobileprovision
+*.cer
+
+# Generated files
+build/
+
+# Temporary files
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Scripts folder
+scripts/

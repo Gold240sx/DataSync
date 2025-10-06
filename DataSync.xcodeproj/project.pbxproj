@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E6953AF22E931E16009E2DA7 /* PowerSyncDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E6953AF12E931E16009E2DA7 /* PowerSyncDynamic */; };
-		E6953AF32E931E1C009E2DA7 /* PowerSyncDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = E6953AF12E931E16009E2DA7 /* PowerSyncDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E6D07D082E8CF56500E424E1 /* config.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = E6D07D072E8CF56500E424E1 /* config.xctestplan */; };
 		E6D07F1B2E8D06CF00E424E1 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E6D07F1A2E8D06CF00E424E1 /* GoogleSignIn */; };
 		E6D07F1D2E8D06CF00E424E1 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E6D07F1C2E8D06CF00E424E1 /* GoogleSignInSwift */; };
@@ -30,20 +28,6 @@
 			remoteInfo = DataSync;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		E6D085F02E930EC000E424E1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E6953AF32E931E1C009E2DA7 /* PowerSyncDynamic in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E6D07CFA2E8CEEAB00E424E1 /* DataSyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataSyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +68,6 @@
 				E6F7221E2E8CDB7600C17320 /* PostgREST in Frameworks */,
 				E6F7221C2E8CDB7600C17320 /* Functions in Frameworks */,
 				E6F7221A2E8CDB7600C17320 /* Auth in Frameworks */,
-				E6953AF22E931E16009E2DA7 /* PowerSyncDynamic in Frameworks */,
 				E6F722202E8CDB7600C17320 /* Realtime in Frameworks */,
 				E6F722162E8CD88400C17320 /* StoreKit.framework in Frameworks */,
 			);
@@ -154,7 +137,6 @@
 				E6F71FF12E8CC27800C17320 /* Sources */,
 				E6F71FF22E8CC27800C17320 /* Frameworks */,
 				E6F71FF32E8CC27800C17320 /* Resources */,
-				E6D085F02E930EC000E424E1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,7 +155,6 @@
 				E6F722232E8CDB7600C17320 /* Supabase */,
 				E6D07F1A2E8D06CF00E424E1 /* GoogleSignIn */,
 				E6D07F1C2E8D06CF00E424E1 /* GoogleSignInSwift */,
-				E6953AF12E931E16009E2DA7 /* PowerSyncDynamic */,
 			);
 			productName = DataSync;
 			productReference = E6F71FF52E8CC27800C17320 /* DataSync.app */;
@@ -210,7 +191,6 @@
 			packageReferences = (
 				E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 				E6D07F192E8D06CF00E424E1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				E6953AF02E931E16009E2DA7 /* XCRemoteSwiftPackageReference "powersync-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E6F71FF62E8CC27800C17320 /* Products */;
@@ -518,14 +498,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E6953AF02E931E16009E2DA7 /* XCRemoteSwiftPackageReference "powersync-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/powersync-ja/powersync-swift";
-			requirement = {
-				kind = exactVersion;
-				version = 1.5.1;
-			};
-		};
 		E6D07F192E8D06CF00E424E1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -545,11 +517,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E6953AF12E931E16009E2DA7 /* PowerSyncDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E6953AF02E931E16009E2DA7 /* XCRemoteSwiftPackageReference "powersync-swift" */;
-			productName = PowerSyncDynamic;
-		};
 		E6D07F1A2E8D06CF00E424E1 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E6D07F192E8D06CF00E424E1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
