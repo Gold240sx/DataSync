@@ -53,6 +53,9 @@ iOSInjectionProject/
 .env.development
 .env.test
 .env.production
+DataSyncDesktop/.env
+DataSyncDesktop/Info.plist
+DataSyncDesktop/Info.plist.backup
 
 # Sensitive information
 *.pem

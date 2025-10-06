@@ -7,6 +7,9 @@
 
 import SwiftUI
 import AppKit
+import Foundation
+// This import ensures the SchemaToSQL.swift functions are available
+// The file is part of the same target, so explicit imports may not be needed
 
 // TextEditor wrapped in a SwiftUI View for selectable text
 struct SelectableTextEditor: View {
@@ -155,18 +158,21 @@ struct ContentView: View {
     }
     
     private func generateAndCopySQL() {
+        // Call the function directly
         let sql = generateCompleteSupabaseSQL()
         sqlOutput = sql
         copyToClipboard(sql, message: "Complete SQL copied to clipboard!")
     }
     
     private func generateAndCopyTablesSQL() {
+        // Call the function directly
         let sql = generateAllSchemasSQL()
         sqlOutput = sql
         copyToClipboard(sql, message: "Tables SQL copied to clipboard!")
     }
     
     private func generateAndCopyRLSSQL() {
+        // Call the function directly
         let sql = generateRLSPoliciesSQL()
         sqlOutput = sql
         copyToClipboard(sql, message: "RLS Policies copied to clipboard!")
@@ -186,13 +192,16 @@ struct ContentView: View {
     private func getSelectedText() -> String? {
         // Get the current first responder
         guard let window = NSApp.mainWindow,
-              let fieldEditor = window.fieldEditor(false, for: nil),
-              let selectedRange = fieldEditor.selectedRanges.first as? NSRange,
-              selectedRange.length > 0 else {
+              let fieldEditor = window.fieldEditor(false, for: nil) as? NSTextView else {
             return nil
         }
         
-        return fieldEditor.string.substring(with: selectedRange)
+        let selectedRange = fieldEditor.selectedRange()
+        if selectedRange.length > 0 {
+            return fieldEditor.string.substring(with: selectedRange)
+        }
+        
+        return nil
     }
 }
 
@@ -207,6 +216,8 @@ extension String {
         return String(self[lowerBound..<upperBound])
     }
 }
+
+// Import statements for the SQL generation functions at the top ensure these are available
 
 #Preview {
     ContentView()
