@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6953AF22E931E16009E2DA7 /* PowerSyncDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E6953AF12E931E16009E2DA7 /* PowerSyncDynamic */; };
+		E6953AF32E931E1C009E2DA7 /* PowerSyncDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = E6953AF12E931E16009E2DA7 /* PowerSyncDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E6D07D082E8CF56500E424E1 /* config.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = E6D07D072E8CF56500E424E1 /* config.xctestplan */; };
+		E6D07F1B2E8D06CF00E424E1 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E6D07F1A2E8D06CF00E424E1 /* GoogleSignIn */; };
+		E6D07F1D2E8D06CF00E424E1 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E6D07F1C2E8D06CF00E424E1 /* GoogleSignInSwift */; };
+		E6F722162E8CD88400C17320 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F722152E8CD88400C17320 /* StoreKit.framework */; };
+		E6F7221A2E8CDB7600C17320 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = E6F722192E8CDB7600C17320 /* Auth */; };
+		E6F7221C2E8CDB7600C17320 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = E6F7221B2E8CDB7600C17320 /* Functions */; };
+		E6F7221E2E8CDB7600C17320 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = E6F7221D2E8CDB7600C17320 /* PostgREST */; };
+		E6F722202E8CDB7600C17320 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = E6F7221F2E8CDB7600C17320 /* Realtime */; };
+		E6F722222E8CDB7600C17320 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = E6F722212E8CDB7600C17320 /* Storage */; };
+		E6F722242E8CDB7600C17320 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = E6F722232E8CDB7600C17320 /* Supabase */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6D07CFE2E8CEEAB00E424E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F71FED2E8CC27800C17320 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F71FF42E8CC27800C17320;
+			remoteInfo = DataSync;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6D085F02E930EC000E424E1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E6953AF32E931E1C009E2DA7 /* PowerSyncDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E6D07CFA2E8CEEAB00E424E1 /* DataSyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataSyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6D07D072E8CF56500E424E1 /* config.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.xctestplan; sourceTree = "<group>"; };
+		E6F71FF52E8CC27800C17320 /* DataSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F722152E8CD88400C17320 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E6D07CFB2E8CEEAB00E424E1 /* DataSyncDataTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DataSyncDataTests;
+			sourceTree = "<group>";
+		};
+		E6F71FF72E8CC27800C17320 /* DataSyncDesktop */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DataSyncDesktop;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6D07CF72E8CEEAB00E424E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F71FF22E8CC27800C17320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6D07F1D2E8D06CF00E424E1 /* GoogleSignInSwift in Frameworks */,
+				E6F722242E8CDB7600C17320 /* Supabase in Frameworks */,
+				E6D07F1B2E8D06CF00E424E1 /* GoogleSignIn in Frameworks */,
+				E6F722222E8CDB7600C17320 /* Storage in Frameworks */,
+				E6F7221E2E8CDB7600C17320 /* PostgREST in Frameworks */,
+				E6F7221C2E8CDB7600C17320 /* Functions in Frameworks */,
+				E6F7221A2E8CDB7600C17320 /* Auth in Frameworks */,
+				E6953AF22E931E16009E2DA7 /* PowerSyncDynamic in Frameworks */,
+				E6F722202E8CDB7600C17320 /* Realtime in Frameworks */,
+				E6F722162E8CD88400C17320 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6F71FEC2E8CC27800C17320 = {
+			isa = PBXGroup;
+			children = (
+				E6D07D072E8CF56500E424E1 /* config.xctestplan */,
+				E6F71FF72E8CC27800C17320 /* DataSyncDesktop */,
+				E6D07CFB2E8CEEAB00E424E1 /* DataSyncDataTests */,
+				E6F722142E8CD88400C17320 /* Frameworks */,
+				E6F71FF62E8CC27800C17320 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6F71FF62E8CC27800C17320 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6F71FF52E8CC27800C17320 /* DataSync.app */,
+				E6D07CFA2E8CEEAB00E424E1 /* DataSyncTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6F722142E8CD88400C17320 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6F722152E8CD88400C17320 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6D07CF92E8CEEAB00E424E1 /* DataSyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6D07D002E8CEEAB00E424E1 /* Build configuration list for PBXNativeTarget "DataSyncTests" */;
+			buildPhases = (
+				E6D07CF62E8CEEAB00E424E1 /* Sources */,
+				E6D07CF72E8CEEAB00E424E1 /* Frameworks */,
+				E6D07CF82E8CEEAB00E424E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6D07CFF2E8CEEAB00E424E1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E6D07CFB2E8CEEAB00E424E1 /* DataSyncDataTests */,
+			);
+			name = DataSyncTests;
+			packageProductDependencies = (
+			);
+			productName = DataSyncTests;
+			productReference = E6D07CFA2E8CEEAB00E424E1 /* DataSyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6F71FF42E8CC27800C17320 /* DataSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F720032E8CC27A00C17320 /* Build configuration list for PBXNativeTarget "DataSync" */;
+			buildPhases = (
+				E6F71FF12E8CC27800C17320 /* Sources */,
+				E6F71FF22E8CC27800C17320 /* Frameworks */,
+				E6F71FF32E8CC27800C17320 /* Resources */,
+				E6D085F02E930EC000E424E1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E6F71FF72E8CC27800C17320 /* DataSyncDesktop */,
+			);
+			name = DataSync;
+			packageProductDependencies = (
+				E6F722192E8CDB7600C17320 /* Auth */,
+				E6F7221B2E8CDB7600C17320 /* Functions */,
+				E6F7221D2E8CDB7600C17320 /* PostgREST */,
+				E6F7221F2E8CDB7600C17320 /* Realtime */,
+				E6F722212E8CDB7600C17320 /* Storage */,
+				E6F722232E8CDB7600C17320 /* Supabase */,
+				E6D07F1A2E8D06CF00E424E1 /* GoogleSignIn */,
+				E6D07F1C2E8D06CF00E424E1 /* GoogleSignInSwift */,
+				E6953AF12E931E16009E2DA7 /* PowerSyncDynamic */,
+			);
+			productName = DataSync;
+			productReference = E6F71FF52E8CC27800C17320 /* DataSync.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6F71FED2E8CC27800C17320 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					E6D07CF92E8CEEAB00E424E1 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = E6F71FF42E8CC27800C17320;
+					};
+					E6F71FF42E8CC27800C17320 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = E6F71FF02E8CC27800C17320 /* Build configuration list for PBXProject "DataSync" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6F71FEC2E8CC27800C17320;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				E6D07F192E8D06CF00E424E1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				E6953AF02E931E16009E2DA7 /* XCRemoteSwiftPackageReference "powersync-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E6F71FF62E8CC27800C17320 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6F71FF42E8CC27800C17320 /* DataSync */,
+				E6D07CF92E8CEEAB00E424E1 /* DataSyncTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6D07CF82E8CEEAB00E424E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F71FF32E8CC27800C17320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6D07D082E8CF56500E424E1 /* config.xctestplan in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6D07CF62E8CEEAB00E424E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F71FF12E8CC27800C17320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6D07CFF2E8CEEAB00E424E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F71FF42E8CC27800C17320 /* DataSync */;
+			targetProxy = E6D07CFE2E8CEEAB00E424E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E6D07D012E8CEEAB00E424E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M7PED79H5;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DataSyncDesktop/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelMartell.DataSync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataSync.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DataSync";
+			};
+			name = Debug;
+		};
+		E6D07D022E8CEEAB00E424E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M7PED79H5;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DataSyncDesktop/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelMartell.DataSync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataSync.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DataSync";
+			};
+			name = Release;
+		};
+		E6F720012E8CC27A00C17320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3M7PED79H5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6F720022E8CC27A00C17320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3M7PED79H5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E6F720042E8CC27A00C17320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DataSyncDesktop/DataSync.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M7PED79H5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DataSyncDesktop/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelMartell.DataSync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E6F720052E8CC27A00C17320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DataSyncDesktop/DataSync.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M7PED79H5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DataSyncDesktop/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelMartell.DataSync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6D07D002E8CEEAB00E424E1 /* Build configuration list for PBXNativeTarget "DataSyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6D07D012E8CEEAB00E424E1 /* Debug */,
+				E6D07D022E8CEEAB00E424E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F71FF02E8CC27800C17320 /* Build configuration list for PBXProject "DataSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F720012E8CC27A00C17320 /* Debug */,
+				E6F720022E8CC27A00C17320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F720032E8CC27A00C17320 /* Build configuration list for PBXNativeTarget "DataSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F720042E8CC27A00C17320 /* Debug */,
+				E6F720052E8CC27A00C17320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E6953AF02E931E16009E2DA7 /* XCRemoteSwiftPackageReference "powersync-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/powersync-ja/powersync-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.1;
+			};
+		};
+		E6D07F192E8D06CF00E424E1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6953AF12E931E16009E2DA7 /* PowerSyncDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6953AF02E931E16009E2DA7 /* XCRemoteSwiftPackageReference "powersync-swift" */;
+			productName = PowerSyncDynamic;
+		};
+		E6D07F1A2E8D06CF00E424E1 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6D07F192E8D06CF00E424E1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		E6D07F1C2E8D06CF00E424E1 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6D07F192E8D06CF00E424E1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		E6F722192E8CDB7600C17320 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		E6F7221B2E8CDB7600C17320 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		E6F7221D2E8CDB7600C17320 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		E6F7221F2E8CDB7600C17320 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		E6F722212E8CDB7600C17320 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		E6F722232E8CDB7600C17320 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6F722182E8CDB7600C17320 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E6F71FED2E8CC27800C17320 /* Project object */;
+}
